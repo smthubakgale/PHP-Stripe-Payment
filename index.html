@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="https://js.stripe.com/v3/"></script> 
+    <title>Checkout Page</title>
+</head>
+<body>
+
+    <div style="display:flex;">
+        <div style="flex:1;" ></div>
+        <div style="flex:3;">
+            <div style="text-align:center; padding:10px; font-size:20px;">
+                User Parameters
+            </div>
+            <div  style="margin:auto;">
+                <label> First Name </label><br/>
+                <input id="fname" type="text" placeholder="First Name" value="Jenny" /> <br/><br/>
+                <label> Last Name </label><br/>
+                <input id="lname" type="text" placeholder="First Name" value="Rossen" /> <br/><br/>
+                <label> Email Address </label><br/> 
+                <input id="eml" type="email" placeholder="Email" value="jenny@example.com" /> <br/> <br/> 
+                <label> City </label><br/>
+                <input id="cty" type="text" placeholder="City" value="Johannesburg" /> <br/><br/>
+                <label> Country </label><br/>
+                <input id="cntry" type="text" placeholder="Country" value="SA" /> <br/><br/>
+                <label> Address 1 </label><br/>
+                <input id="add1" type="text" placeholder="Address 1" value="143 Mandela Street" /> <br/><br/>
+                <label> Address 2 </label><br/>
+                <input id="add2" type="text" placeholder="Address 2" value="67 Robertson Avenue" /> <br/><br/>
+                <label> Postal Code </label><br/>
+                <input id="pcode" type="text" placeholder="Postal Code" value="2022" /> <br/><br/>
+                <label> Phone Number </label><br/>
+                <input id="phone" type="text" placeholder="Phone" value="+15555555555" /> <br/><br/>
+            </div>
+        </div>
+        <div style="flex:3;">
+                    
+            <div style="text-align:center; padding:10px; font-size:20px;">
+                Stripe Test Parameters
+            </div>
+            <div  style="margin:auto;">
+                Success : 4242 4242 4242 4242 <br/>
+                Not Authenticated : 4000 0025 0000 3155<br/>
+                Declined : 4000 0000 0000 9995<br/>
+            </div>
+            
+            <div style="text-align:center; padding:10px; font-size:20px;">
+                Checkout Parameters 
+            </div>
+            <div style="margin:auto; ">
+
+                <label for="cardnum">Card Number: </label>
+                <div id="cardnum"></div>
+
+                <label for="cardexp">Card Expiry: </label>
+                <div id="cardexp"></div>
+
+                <label for="cardcvc">Card CVC: </label>
+                <div id="cardcvc"></div>
+
+                <br/>
+                <button onclick="pay()" style="margin:auto" > Pay Now</button>
+
+            </div>
+            <div class="status"></div> 
+        </div> 
+        <div style="flex:1;" ></div>
+    </div>
+    
+   <!--
+    
+
+   -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
