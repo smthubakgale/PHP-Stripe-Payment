@@ -48,7 +48,7 @@ cvcElm.on('change', (e) =>{
 
 function pay()
 {    
-      $.post( "http://localhost:8002/index.php",
+      $.post( "https://teuber.000webhostapp.com/index.php",
       { amount:3000 , description:"food products"} , function(data) 
       { 
           var client_secret = data.client_secret;   
