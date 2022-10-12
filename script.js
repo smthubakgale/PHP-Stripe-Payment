@@ -49,7 +49,7 @@ cvcElm.on('change', (e) =>{
 function pay()
 {    
       $.post( "https://teuber.000webhostapp.com/index.php",
-      { amount:3000 , description:"food products"} , function(data) 
+      { amount: $("#amnt").val() , description:$("#dscr").val()} , function(data) 
       { 
           var client_secret = data.client_secret;   
 
